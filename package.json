@@ -1,0 +1,45 @@
+{
+  "name": "unistore-fire",
+  "version": "0.1.3",
+  "description": "Map your Firebase database to unistore Stores.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "js:next": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/rakannimer/unistore-fire",
+  "author": "rakannimer",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "watch": "jest --watch --coverage",
+    "build": "rollup -c",
+    "test": "jest",
+    "start": "npm run build && node dist/index.cjs.js",
+    "prepublish": "npm run test && npm run build"
+  },
+  "files": [
+    "dist/"
+  ],
+  "peerDependencies": {
+    "unistore": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.3",
+    "firebase": "^5.5.3",
+    "jest": "^23.6.0",
+    "mobx": "^5.5.0",
+    "prettier": "^1.14.3",
+    "rollup": "^0.66.4",
+    "rollup-plugin-typescript2": "^0.17.1",
+    "ts-jest": "^23.10.3",
+    "typescript": "^3.1.1",
+    "unistore": "^3.1.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "dependencies": {
+    "get-firebase-ref": "^0.1.0",
+    "initialize-firebase-app": "^0.1.0"
+  }
+}

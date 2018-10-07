@@ -6,7 +6,6 @@ import {
   getFirebaseRef
 } from "../src/firebase-utils/index";
 import { config } from "../test-config";
-import { waitUntilBox } from "../src/test-utils";
 
 describe("toArray", () => {
   const testPath = `mobx-fire/tests/${Date.now()}/`;
@@ -57,6 +56,6 @@ Array [
       await ref.set(null);
       expect(array.getState().value).toMatchInlineSnapshot(`Array []`);
     },
-    20000
+    TIMEOUT
   );
 });

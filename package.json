@@ -15,7 +15,8 @@
     "build": "rollup -c",
     "test": "jest",
     "start": "npm run build && node dist/index.cjs.js",
-    "prepublish": "npm run test && npm run build"
+    "prepublish": "npm run test && npm run build",
+    "commit": "npx git-cz"
   },
   "files": [
     "dist/"
@@ -31,6 +32,7 @@
     "prettier": "^1.14.3",
     "rollup": "^0.66.4",
     "rollup-plugin-typescript2": "^0.17.1",
+    "semantic-release": "^15.9.17",
     "ts-jest": "^23.10.3",
     "typescript": "^3.1.1",
     "unistore": "^3.1.0"

@@ -1,3 +1,3 @@
 export * from "./to-array";
 export * from "./to-box";
-export * from "./to-map";
+export * from "./to-object";

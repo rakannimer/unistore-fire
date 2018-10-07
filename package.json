@@ -1,6 +1,6 @@
 {
   "name": "unistore-fire",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Map your Firebase database to unistore Stores.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

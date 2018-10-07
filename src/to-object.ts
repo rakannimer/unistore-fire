@@ -8,7 +8,7 @@ function defaultFilter<V>(p: V, c: V) {
   return true;
 }
 
-export type ToMapArgs<V> = {
+export type ToObjectArgs<V> = {
   mapKey?: (m: string) => string | number;
   mapValue?: (m: V) => any;
   filter?: (prevValue: V, currentValue: V) => boolean;
@@ -52,7 +52,7 @@ function remove<T>(state: State<T>, key: any) {
   };
 }
 
-export function toMap<K, V>(
+export function toObject<V>(
   ref: ReturnType<typeof getFirebaseRef>,
   {
     mapKey = defaultMap,
@@ -67,7 +67,7 @@ export function toMap<K, V>(
     filter: defaultFilter,
     initial: {},
     getUnsub: () => {}
-  } as ToMapArgs<V>
+  } as ToObjectArgs<V>
 ) {
   const map = createStore({ value: initial });
   const unsubChildAdded = ref.on("child_added", (v: any) => {

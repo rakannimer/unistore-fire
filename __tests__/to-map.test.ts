@@ -1,5 +1,5 @@
 import * as firebase from "firebase";
-import { toMap } from "../src";
+import { toObject } from "../src";
 import {
   initializeFirebaseApp,
   getFirebaseRef
@@ -10,7 +10,7 @@ const toJS = (store: any) => {
   return store.getState().value;
 };
 
-describe("toMap", () => {
+describe("toObject", () => {
   const testPath = `mobx-fire/tests/${Date.now()}/`;
   const ARRAY_LENGTH = 2;
   const listAsObject = Array.from({ length: ARRAY_LENGTH }, (v, i) => {
@@ -32,11 +32,11 @@ describe("toMap", () => {
     await ref.set(null);
   });
   test("exists", () => {
-    expect(toMap).toBeTruthy();
+    expect(toObject).toBeTruthy();
   });
   test("works", async () => {
     const ref = getFirebaseRef({ firebase, path: testPath });
-    const map = toMap(ref);
+    const map = toObject(ref);
     await ref.set(listAsObject);
     expect(toJS(map)).toMatchInlineSnapshot(`
 Object {
@@ -53,7 +53,7 @@ Object {
   });
   test("works with custom mapKey", async () => {
     const ref = getFirebaseRef({ firebase, path: testPath });
-    const map = toMap(ref, {
+    const map = toObject(ref, {
       mapKey: key => {
         return `${key}`.toUpperCase();
       }
@@ -75,7 +75,7 @@ Object {
 
   test("works with custom mapValue", async () => {
     const ref = getFirebaseRef({ firebase, path: testPath });
-    const map = toMap<string, { data: any }>(ref, {
+    const map = toObject<{ data: any }>(ref, {
       mapValue: v => {
         if (!v) return v;
         return v.data;

@@ -1,21 +1,23 @@
-# Mobx Fire
+# Unistore Fire
+
+## Realtime Database
 
 Map your Firebase database to [unistore](https://github.com/developit/unistore#usage) Stores.
 
 This module exports 3 methods :
 
 - toBox
-- toMap
+- toObject
 - toArray
 
 ## Usage
 
 ```typescript
-import { toBox, toMap, toArray } from "unistore-fire";
+import { toBox, toObject, toArray } from "unistore-fire";
 
 const ref = firebase.database().ref("path/to/data");
 const box = toBox(ref);
-const map = toMap(ref);
+const map = toObject(ref);
 const array = toArray(ref);
 ```
 

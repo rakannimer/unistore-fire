@@ -93,7 +93,7 @@ Check [the tests](__tests__) for more examples !
 [circleci-href]: https://circleci.com/gh/rakannimer/unistore-fire
 [circleci-badge]: https://img.shields.io/circleci/project/github/rakannimer/unistore-fire.svg
 [npm-href]: https://www.npmjs.com/package/unistore-fire
-[npm-version-badge]: https://img.shields.io/npm/v/npm.svg
+[npm-version-badge]: https://img.shields.io/npm/v/unistore-fire.svg
 [npm-license-badge]: https://img.shields.io/github/license/rakannimer/unistore-fire.svg
 [bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/unistore-fire.svg
 [bundlephobia-href]: https://bundlephobia.com/result?p=unistore-fire

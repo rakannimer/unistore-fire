@@ -15,16 +15,16 @@ This library relies on having firebase (web, admin or react-native) and unistore
   # Or npm i unistore firebase
 ```
 
-### Install
+## Install
 
 ```sh
   yarn add unistore-fire
   # Or npm i unistore-fire
 ```
 
-### Usage
+## Usage
 
-#### Realtime Database
+### Realtime Database
 
 Map your Firebase database to [unistore](https://github.com/developit/unistore#usage) Stores.
 
